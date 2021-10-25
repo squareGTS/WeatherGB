@@ -14,7 +14,6 @@ class WeatherViewController: UICollectionViewController {
     // создаем экземпляр сервиса
     let weatherService = WeatherService()
     
-    
     let dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
@@ -27,11 +26,9 @@ class WeatherViewController: UICollectionViewController {
             // коллекция должна прочитать новые данные
             self?.collectionView?.reloadData()
         }
-        
     }
     
     // MARK: UICollectionViewDataSource
-    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -42,17 +39,10 @@ class WeatherViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherCell", for: indexPath) as! WeatherCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WeatherCell.reuseID, for: indexPath) as! WeatherCell
         
-        let weather = weathers[indexPath.row]
+        cell.configure(whithWeather: weathers[indexPath.row])
         
-        cell.weather.text = "\(weather.temp) C"
-        dateFormatter.dateFormat = "dd.MM.yyyy HH.mm"
-        let date = Date(timeIntervalSince1970: weather.date)
-        let stringDate = dateFormatter.string(from: date)
-        cell.time.text = stringDate
-        
-        cell.icon.image = UIImage(named: weather.weatherIcon)
         return cell
     }
     

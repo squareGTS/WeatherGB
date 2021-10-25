@@ -19,7 +19,7 @@ class UserCitiesTableViewController: UITableViewController {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		guard
 			segue.identifier == "WeatherSegue",
-			let destinationController = segue.destination as? WeatherCollectioCollectionViewController,
+			let destinationController = segue.destination as? WeatherViewController,
 			let index = tableView.indexPathForSelectedRow?.row
 		else {
 			return

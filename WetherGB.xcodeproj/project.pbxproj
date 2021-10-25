@@ -20,8 +20,8 @@
 		A2A97D8F26388AF5008EAE96 /* UserCitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A97D8E26388AF5008EAE96 /* UserCitiesTableViewController.swift */; };
 		A2A97D9226388B4D008EAE96 /* CitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A97D9126388B4D008EAE96 /* CitiesTableViewCell.swift */; };
 		A2A97D9526388F87008EAE96 /* AllCitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A97D9426388F87008EAE96 /* AllCitiesTableViewController.swift */; };
-		A2A97D98263895FE008EAE96 /* WeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A97D97263895FE008EAE96 /* WeatherCollectionViewCell.swift */; };
-		A2A97D9B2638970A008EAE96 /* WeatherCollectioCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A97D9A2638970A008EAE96 /* WeatherCollectioCollectionViewController.swift */; };
+		A2A97D98263895FE008EAE96 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A97D97263895FE008EAE96 /* WeatherCell.swift */; };
+		A2A97D9B2638970A008EAE96 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A97D9A2638970A008EAE96 /* WeatherViewController.swift */; };
 		A2BD5D9F264EE7AA00BB43F0 /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD5D9E264EE7AA00BB43F0 /* AnimationController.swift */; };
 		A2BD5DA2264EEF8700BB43F0 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD5DA1264EEF8700BB43F0 /* StarView.swift */; };
 		A2DCC40126583C19000B5419 /* CustomNavigationCintroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DCC40026583C19000B5419 /* CustomNavigationCintroller.swift */; };
@@ -45,8 +45,8 @@
 		A2A97D8E26388AF5008EAE96 /* UserCitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCitiesTableViewController.swift; sourceTree = "<group>"; };
 		A2A97D9126388B4D008EAE96 /* CitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTableViewCell.swift; sourceTree = "<group>"; };
 		A2A97D9426388F87008EAE96 /* AllCitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCitiesTableViewController.swift; sourceTree = "<group>"; };
-		A2A97D97263895FE008EAE96 /* WeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCollectionViewCell.swift; sourceTree = "<group>"; };
-		A2A97D9A2638970A008EAE96 /* WeatherCollectioCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCollectioCollectionViewController.swift; sourceTree = "<group>"; };
+		A2A97D97263895FE008EAE96 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		A2A97D9A2638970A008EAE96 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		A2BD5D9E264EE7AA00BB43F0 /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
 		A2BD5DA1264EEF8700BB43F0 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
 		A2DCC40026583C19000B5419 /* CustomNavigationCintroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationCintroller.swift; sourceTree = "<group>"; };
@@ -82,8 +82,8 @@
 		51126B042726DA4300CC5044 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				A2A97D9A2638970A008EAE96 /* WeatherCollectioCollectionViewController.swift */,
-				A2A97D97263895FE008EAE96 /* WeatherCollectionViewCell.swift */,
+				A2A97D9A2638970A008EAE96 /* WeatherViewController.swift */,
+				A2A97D97263895FE008EAE96 /* WeatherCell.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -96,6 +96,16 @@
 				A2A97D9126388B4D008EAE96 /* CitiesTableViewCell.swift */,
 			);
 			path = Cities;
+			sourceTree = "<group>";
+		};
+		51126B0C2726E89C00CC5044 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				51126B082726DF8300CC5044 /* Weather.swift */,
+				51126B0A2726DFC300CC5044 /* WeatherResponse.swift */,
+				51126B062726DB5600CC5044 /* WeatherService .swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		8581B840262F5109006164CE = {
@@ -126,7 +136,7 @@
 				51126B052726DA5400CC5044 /* Cities */,
 				51126B042726DA4300CC5044 /* Weather */,
 				A2BD5D9E264EE7AA00BB43F0 /* AnimationController.swift */,
-				51126B062726DB5600CC5044 /* WeatherService .swift */,
+				51126B0C2726E89C00CC5044 /* Service */,
 				A2BD5DA1264EEF8700BB43F0 /* StarView.swift */,
 				8581B852262F5109006164CE /* Main.storyboard */,
 				8581B855262F510B006164CE /* Assets.xcassets */,
@@ -142,8 +152,6 @@
 				A2DCC40026583C19000B5419 /* CustomNavigationCintroller.swift */,
 				A2DCC40426583C8B000B5419 /* CustomInteractiveTransition.swift */,
 				A2DCC40726583EBE000B5419 /* PushAnimator.swift */,
-				51126B082726DF8300CC5044 /* Weather.swift */,
-				51126B0A2726DFC300CC5044 /* WeatherResponse.swift */,
 				A2DCC40A265840AB000B5419 /* PopAnimator.swift */,
 			);
 			path = CunstomTransition;
@@ -275,7 +283,7 @@
 				8581B863262F5A55006164CE /* LoginFormViewController.swift in Sources */,
 				A2A97D9226388B4D008EAE96 /* CitiesTableViewCell.swift in Sources */,
 				51126B072726DB5700CC5044 /* WeatherService .swift in Sources */,
-				A2A97D9B2638970A008EAE96 /* WeatherCollectioCollectionViewController.swift in Sources */,
+				A2A97D9B2638970A008EAE96 /* WeatherViewController.swift in Sources */,
 				A2A97D9526388F87008EAE96 /* AllCitiesTableViewController.swift in Sources */,
 				A2A97D8F26388AF5008EAE96 /* UserCitiesTableViewController.swift in Sources */,
 				8581B84D262F5109006164CE /* AppDelegate.swift in Sources */,
@@ -287,7 +295,7 @@
 				A2DCC40526583C8B000B5419 /* CustomInteractiveTransition.swift in Sources */,
 				A2BD5DA2264EEF8700BB43F0 /* StarView.swift in Sources */,
 				A2DCC40126583C19000B5419 /* CustomNavigationCintroller.swift in Sources */,
-				A2A97D98263895FE008EAE96 /* WeatherCollectionViewCell.swift in Sources */,
+				A2A97D98263895FE008EAE96 /* WeatherCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

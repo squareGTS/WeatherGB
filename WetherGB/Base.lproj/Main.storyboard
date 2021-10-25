@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2X5-IO-Pek">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2X5-IO-Pek">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -133,7 +134,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CitiesTableViewCell" id="yXX-bb-djS" customClass="CitiesTableViewCell" customModule="WetherGB" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="414" height="104.5"/>
+                                <rect key="frame" x="0.0" y="49.5" width="414" height="104.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yXX-bb-djS" id="d4N-5q-yiH">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="104.5"/>
@@ -191,7 +192,7 @@
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CitiesTableViewCell" id="suo-GA-rTZ" customClass="CitiesTableViewCell" customModule="WetherGB" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="414" height="75.5"/>
+                                <rect key="frame" x="0.0" y="49.5" width="414" height="75.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="suo-GA-rTZ" id="l6Z-Ia-5dn">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="75.5"/>
@@ -246,10 +247,10 @@
             </objects>
             <point key="canvasLocation" x="2198.5507246376815" y="-190.17857142857142"/>
         </scene>
-        <!--Weather Collectio Collection View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="ZsV-hC-vqx">
             <objects>
-                <collectionViewController id="ue2-rb-zlP" customClass="WeatherCollectioCollectionViewController" customModule="WetherGB" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="ue2-rb-zlP" customClass="WeatherViewController" customModule="WetherGB" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6aK-5t-TGi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -261,7 +262,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeatherCollectionViewCell" id="xNe-KI-ahV" customClass="WeatherCollectionViewCell" customModule="WetherGB" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeatherCell" id="xNe-KI-ahV" customClass="WeatherCell" customModule="WetherGB" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="182" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3ab-hY-nPV">
@@ -302,9 +303,9 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="182" height="159"/>
                                 <connections>
-                                    <outlet property="iconImageView" destination="RLK-6P-Yx4" id="awU-Ku-hJY"/>
-                                    <outlet property="tempLabel" destination="mF9-4M-DL6" id="Gmt-Yh-7s9"/>
-                                    <outlet property="timeLabel" destination="DpK-QX-H6P" id="XrK-nb-i33"/>
+                                    <outlet property="icon" destination="RLK-6P-Yx4" id="awU-Ku-hJY"/>
+                                    <outlet property="time" destination="DpK-QX-H6P" id="XrK-nb-i33"/>
+                                    <outlet property="weather" destination="mF9-4M-DL6" id="Gmt-Yh-7s9"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
