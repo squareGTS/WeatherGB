@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WeatherCollectionViewCell: UICollectionViewCell {
+class WeatherCell: UICollectionViewCell {
 
 	static let reuseID = "WeatherCollectionViewCell"
 

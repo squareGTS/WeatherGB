@@ -7,12 +7,15 @@
 
 import UIKit
 
-class WeatherCollectioCollectionViewController: UICollectionViewController {
+class WeatherViewController: UICollectionViewController {
     
     // массив с погодой
     var weathers = [Weather]()
     // создаем экземпляр сервиса
     let weatherService = WeatherService()
+    
+    
+    let dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,17 +37,22 @@ class WeatherCollectioCollectionViewController: UICollectionViewController {
         return 1
     }
     
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return weathers.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WeatherCollectionViewCell.reuseID, for: indexPath) as! WeatherCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherCell", for: indexPath) as! WeatherCell
         
-        cell.tempLabel.text = "\(indexPath.row) ℃"
-        cell.timeLabel.text = "27.04.2021"
+        let weather = weathers[indexPath.row]
         
+        cell.weather.text = "\(weather.temp) C"
+        dateFormatter.dateFormat = "dd.MM.yyyy HH.mm"
+        let date = Date(timeIntervalSince1970: weather.date)
+        let stringDate = dateFormatter.string(from: date)
+        cell.time.text = stringDate
+        
+        cell.icon.image = UIImage(named: weather.weatherIcon)
         return cell
     }
     
